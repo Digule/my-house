@@ -75,6 +75,7 @@ public class Picture
         moon.changeSize(40);
         moon.makeVisible();    
         moon.slowMoveVertical(100);
+      
         
     }
 
@@ -97,6 +98,7 @@ public class Picture
      */
     public void setColor()
     {
+        
         if (wall != null)   // only if it's painted already...
         {
             wall.changeColor("red");
@@ -104,5 +106,31 @@ public class Picture
             roof.changeColor("green");
             sun.changeColor("yellow");
         }
+    }
+    public void amanecer()
+    {
+        
+        campo = new Square();
+        campo.makeVisible();
+        campo.moveUp();
+        campo.changeColor("green");
+        campo.moveVertical(140);
+        campo.changeSize(540);
+        campo.moveHorizontal(-340);
+        
+        
+        moon.makeVisible();    
+        moon.slowMoveVertical(280);
+
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveVertical(-140);
+        sun.moveHorizontal(140);
+        sun.changeSize(80);
+        sun.makeVisible();
+        sun.moveDown();
+        sun.slowMoveVertical(80);
+        
+       
     }
 }
